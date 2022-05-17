@@ -1,0 +1,122 @@
+$color1: #000000;
+$color2: #2b8ead;
+$color3: #333333;
+$color4: #6f98a8;
+$color5: #ffffff;
+$color6: #bfbfbf;
+$color7: #efefef;
+$color8: #2f454e;
+$color9: #72c3dc;
+
+#appHeader {
+  text-align: center;
+  h1 {
+    color: $color5;
+    background-color: $color1;
+  }
+}
+
+#block3,
+#block5,
+#block9 {
+  background-color: $color8;
+}
+#block2,
+#block4 {
+  background-color: $color4;
+}
+#block1,
+#block8 {
+  background-color: $color9;
+}
+#block7,
+#block6 {
+  background-color: $color6;
+}
+
+#appContainer {
+  width: 100vw;
+}
+
+#flexDynamicContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  @media (max-width: 959px) {
+    flex-direction: column;
+  }
+  @media (min-width: 960px) {
+    flex-direction: row;
+    width: 75%;
+    flex-flow: wrap;
+  }
+}
+
+.block {
+  width: auto;
+  max-height: 100%;
+  text-align: center;
+  padding: 10px;
+  @media (max-width: 959px) {
+    height: 20px;
+    width: 100%;
+    color: $color1;
+    .blockLabel {
+      font-size: 20px;
+    }
+  }
+  @media (min-width: 960px) {
+    flex-basis: 25%;
+    vertical-align: middle;
+    color: $color5;
+    .blockLabel {
+      font-size: 40px;
+    }
+  }
+}
+
+#flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 959px) {
+    justify-content: center;
+    flex-direction: column;
+    #buttonContainer {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  @media (min-width: 960px) {
+    justify-content: stretch;
+    flex-direction: row-reverse;
+    #buttonContainer {
+      width: 25%;
+    }
+  }
+}
+
+#buttonContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+.appButton {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: $color9;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px $color2;
+  margin: 10px 5px 30px;
+}
